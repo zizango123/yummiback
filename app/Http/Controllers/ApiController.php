@@ -76,7 +76,7 @@ class ApiController extends Controller
         $order->total = $subtotal;
         $order->delivery_charge = $delivery;
         $order->grand_total = $grandtotal;
-
+        $order->currency = $currency;
         $order->payment_type = 'cod';
         $order->status = 'Pending';
 

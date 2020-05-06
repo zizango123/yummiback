@@ -21,7 +21,13 @@
         <tr>
         <th scope="row">YUM{{$value->id}}</th>
         <td>{{$value->delivery_address}}<br><span>Mobile:&nbsp;</span>{{$value->mobile}}</td>
-        <td>€&nbsp;{{$value->grand_total}}</td>
+        <td>
+          @if($value->currency == 'euro')
+            €
+          @else
+            $
+          @endif
+            &nbsp;{{$value->grand_total}}</td>
         <td>{{$value->payment_type}}</td>
         <td>
           @if($value->status=='')
